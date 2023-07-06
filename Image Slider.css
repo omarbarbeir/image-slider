@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:linear-gradient(#23494a,#fce48e);
+    height: 100vh;
+    font-family: system-ui;
+}
+/* ################################# */
+
+.container{
+    margin:10px auto;
+    width:800px;
+    height:250px;
+    position: relative;
+}
+.container img{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+    width:800px;
+    height:250px;
+    border-radius: 10px;
+}
+.container img.active{
+    opacity: 1;
+}
+
+.slider-number{
+    position: absolute;
+    left:10px;
+    top:10px;
+    background: rgba(0,0,0,0.1);
+    color:white;
+    padding:5px 10px;
+    font-size:20px;
+    z-index: 2;
+    border-radius: 6px;
+}
+.controls{
+    width:880px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+}
+.controls .prev,.next{
+    background-color: cadetblue;
+    color:white;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    padding:5px;
+    width:20%;
+    cursor: pointer;
+    user-select: none;
+}
+.controls .prev.disable
+,.next.disable{
+    background-color: rgba(0,0,0,0.2);
+    cursor: no-drop;
+}
+
+.indicators{
+    width:60%;
+    align-items: start;
+}
+.indicators ul{
+    list-style: none;
+    margin:0 ;
+    text-align: center;
+}
+
+.indicators ul li{
+    display: inline-block;
+    background-color: antiquewhite;
+    color:#333;
+    font-weight: bold;
+    height:28px;
+    width:20px;
+    border-radius: 4px;
+    margin:0 2px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.indicators ul li.active{
+    background: cadetblue;
+    color:whitesmoke
+}
